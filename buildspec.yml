@@ -3,14 +3,14 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo No dependencies to install for static site.
+      - echo "Install phase (nothing much to install for static site)"
   build:
     commands:
-      - echo Build step is not needed for static site.
+      - echo "Build phase (no actual build needed)"
   post_build:
     commands:
-      - echo Build completed. Preparing for deployment.
+      - echo "Build completed, ready to deploy"
 
 artifacts:
   files:
-    - '**/*'
+    - index.html
