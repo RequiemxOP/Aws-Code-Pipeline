@@ -3,20 +3,14 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing Apache (httpd) in build env..."
-      - yum install -y httpd || true
-  pre_build:
-    commands:
-      - echo "Pre-build steps - None required"
+      - echo No dependencies to install for static site.
   build:
     commands:
-      - echo "Build step - Copying files"
-      - mkdir -p build
-      - cp -r * build/
+      - echo Build step is not needed for static site.
   post_build:
     commands:
-      - echo "Post-build - Build completed successfully"
+      - echo Build completed. Preparing for deployment.
+
 artifacts:
   files:
     - '**/*'
-  base-directory: build
